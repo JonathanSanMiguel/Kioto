@@ -8,6 +8,7 @@ import { ItemFormComponent } from './components/item-form/item-form.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { KiotoComponent } from './components/kioto/kioto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { KiotoComponent } from './components/kioto/kioto.component';
     KiotoComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
