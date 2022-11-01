@@ -1,1 +1,24 @@
-<p>item-list works!</p>
+<body>
+    <h1>Compras de Almacen Registradas</h1>
+
+    <table id="customers">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Peso</th>
+            <th>Marca</th>
+            <th>Estado</th>
+            <th>Cantidad</th>
+        </tr>
+
+        <tr *ngFor="let item of items">
+            <td>{{item.nombre}}</td>
+            <td>{{item.descripcion}}</td>
+            <td>{{item.peso}}</td>
+            <td>{{item.marca}}</td>
+            <td>{{item.estado}}</td>
+            <td>{{item.cantidad}}</td>
+        </tr>
+    </table>
+
+</body>

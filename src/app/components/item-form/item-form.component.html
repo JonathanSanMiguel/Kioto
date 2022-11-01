@@ -1,1 +1,72 @@
-<p>item-form works!</p>
+<body>
+    <h1>Registrar Una Nueva Compra</h1>
+
+    <div class="container">
+        <form action="form">
+            <!--Nombre-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="nombre">Nombre</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="nombre" name="Nombre" placeholder="Ingrese el nombre del articulo">
+                </div>
+            </div>
+            <!--Descripcion-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="descripcion">Descripcion</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="descripcion" name="Descripcion" placeholder="Escriba la descripcion del articulo" style="height:180px"></textarea>
+                </div>
+            </div>
+            <!--Peso-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="peso">Peso (En Gramos)</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="peso" name="Peso" placeholder="Ingrese el peso del articulo">
+                </div>
+            </div>
+            <!--Marca-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="marca">Marca</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="marca" name="Marca" placeholder="Ingrese la marca del articulo">
+                </div>
+            </div>
+            <!--Estado-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="estado">Estado</label>
+                </div>
+                <div class="col-75">
+                    <select id="estado" name="estado">
+                       <option value="nuevo">Nuevo</option>
+                       <option value="usado">Usado</option>
+                       <option value="reco">Reacondicionado</option>
+                    </select>
+                </div>
+            </div>
+            <!--Cantidad-->
+            <div class="row">
+                <div class="col-25">
+                    <label for="cantidad">Cantidad (Cajas, Piezas, Paquetes)</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="cantidad" name="Cantidad" placeholder="Ingrese la cantidad de cajas, piezas o paquetes">
+                </div>
+            </div>
+            <br>
+            <!--Boton para Guardar-->
+            <div class="row">
+                <input type="submit" value="Guardar">
+            </div>
+        </form>
+    </div>
+
+</body>
