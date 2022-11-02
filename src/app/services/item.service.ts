@@ -8,7 +8,7 @@ import { catchError, map } from 'rxjs/operators'
   providedIn: 'root'
 })
 export class ItemService {
-  // Node/Express API
+  // EndPoint Node/Express API
   REST_API: string = 'http://localhost:5000/Inshka';
   // Http Header
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
@@ -21,9 +21,13 @@ export class ItemService {
     return this.http.get<item[]>(API_URL)
   }//getAllItems
 
+  getOneItem(id: any): Observable<item> {
+    return this.http.get<item>(`${this.REST_API}/OneItem${id}`);
+  }//getOneItem
+
   // Agregar un item
   public CreateItem(data: item): Observable<any> {
-    //guarda el Enpoint y la extencion en un let
+    //Canota el Enpoint y la extencion en un let
     let API_URL = `${this.REST_API}/create`;
     return this.http.post(API_URL, data)
     .pipe(
