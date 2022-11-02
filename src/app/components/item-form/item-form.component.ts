@@ -36,14 +36,14 @@ export class ItemFormComponent implements OnInit {
     .subscribe({
       next: (res) => {
         console.log(res);
-        this.submitted = true;
+        this.submitted = true
       },
       error: (e) => console.error(e)
     })//.subscribe
   }//GuardarForm
 
   newForm(): void {
-    this.submitted = false;
+    this.submitted = false
     this.item = {
       nombre: '',
       descripcion: '',
