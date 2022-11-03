@@ -40,27 +40,26 @@
                     </div>
                 </div>
                 <!--Estado-->
-                <div class="row">
-                    <div class="col-25">
-                        <label for="estado">Estado</label>
-                    </div>
-                    <div class="col-75">
-                        <select [(ngModel)]="item.estado" id="estado" name="estado">
+
+                <div class="col-25">
+                    <label for="estado">Estado</label>
+                </div>
+                <div class="col-75">
+                    <select [(ngModel)]="item.estado" id="estado" name="estado">
                        <option value="nuevo">Nuevo</option>
                        <option value="usado">Usado</option>
                        <option value="reacondicionado">Reacondicionado</option>
                     </select>
-                    </div>
                 </div>
+
                 <!--Cantidad-->
-                <div class="row">
-                    <div class="col-25">
-                        <label for="cantidad">Cantidad (Cajas, Piezas, Paquetes)</label>
-                    </div>
-                    <div class="col-75">
-                        <input [(ngModel)]="item.cantidad" type="number" id="cantidad" name="Cantidad" placeholder="Ingrese la cantidad de cajas, piezas o paquetes">
-                    </div>
+                <div class="col-25">
+                    <label for="cantidad">Cantidad (Cajas, Piezas, Paquetes)</label>
                 </div>
+                <div class="col-75">
+                    <input [(ngModel)]="item.cantidad" type="number" id="cantidad" name="Cantidad" placeholder="Ingrese la cantidad de cajas, piezas o paquetes">
+                </div>
+
                 <br>
                 <!--Boton para Guardar-->
                 <div class="row">

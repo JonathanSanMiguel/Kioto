@@ -20,7 +20,8 @@ export class ItemService {
     let API_URL = `${this.REST_API}/Items`
     return this.http.get<item[]>(API_URL)
   }//getAllItems
-
+  
+  //Obtnener un item.
   getOneItem(id: any): Observable<item> {
     return this.http.get<item>(`${this.REST_API}/OneItem${id}`);
   }//getOneItem

@@ -11,39 +11,27 @@ import { item } from '../../models/item';
 export class ItemListComponent implements OnInit {
   items: item[] = []
 
-  @Input() viewMode = false
-
-  @Input() currentItem: item = {
-    nombre: '',
-    descripcion: '',
-    peso: 0,
-    marca: '',
-    estado: '',
-    cantidad: 0
-  }
-
-  message = ''
-
-  constructor(private us: ItemService,  private router: Router) { }
+  constructor( private us: ItemService ) { }
 
   ngOnInit(): void {
-
     this.us.getAllItems().subscribe(
       element => {
-        this.items = element;
+        this.items = element
       }//element
     )//getAllItem
   }//ngOnInit
 
-  getOne(id: string): void {
-    this.us.getOneItem(id)
-    .subscribe({
-      next: (data) => {
-        this.currentItem = data;
-        console.log(data);
-      },
-      error: (e) => console.error(e)
-    });
+  eliminar(id: any){
+    this.us.deleteItem(id).subscribe(
+      res=>{
+        console.log('item borrado')
+        this.ngOnInit();
+      }//res
+    )//deleteItem
+  }//eliminar
+
+  editar(){
+    
   }
 
 }//ItemListComponent

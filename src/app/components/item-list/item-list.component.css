@@ -10,11 +10,6 @@
     padding: 8px;
 }
 
-h1 {
-    text-align: center;
-    padding: 30px;
-}
-
 #customers tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -29,4 +24,55 @@ h1 {
     text-align: center;
     background-color: #04AA6D;
     color: white;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.btnEliminar {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btnEliminar:hover {
+    opacity: 1
+}
+
+.btnEditar {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4c87af;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 100%;
+}
+
+.btnEditar:hover {
+    background-color: #433e8e
+}
+
+.btnEditar:active {
+    background-color: #433e8e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

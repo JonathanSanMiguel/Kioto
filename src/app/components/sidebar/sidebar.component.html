@@ -1,9 +1,10 @@
 <ul>
-    <li><a class="active" (click)="goToKioto()"> KIOTO </a></li>
-    <li><a (click)="goToItemList()"> Almacen </a></li>
-    <li><a class="nav-link" (click)="goToItemForm()"> Agregar Item </a></li>
+    <li><a class="active" routerLink="/kioto"> KIOTO </a></li>
+    <li><a routerLink="/itemList"> Almacen </a></li>
+    <li><a routerLink="/itemForm"> Agregar Item </a></li>
+
     <li style="float:right">
-        <a (click)="goToItemForm()">About us</a>
+        <a routerLink="/kioto">About us</a>
     </li>
 </ul>
 

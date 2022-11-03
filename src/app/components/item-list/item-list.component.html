@@ -3,6 +3,7 @@
 
     <table id="customers">
         <tr>
+            <th>No.</th>
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Peso</th>
@@ -12,12 +13,16 @@
         </tr>
 
         <tr *ngFor="let item of items">
+            <td></td>
             <td>{{item.nombre}}</td>
             <td>{{item.descripcion}}</td>
             <td>{{item.peso}}</td>
             <td>{{item.marca}}</td>
             <td>{{item.estado}}</td>
             <td>{{item.cantidad}}</td>
+
+            <td><button (click)="editar()" class="btnEditar">Editar</button></td>
+            <td><button (click)="eliminar(item.id)" class="btnEliminar">Eliminar</button></td>
         </tr>
     </table>
 

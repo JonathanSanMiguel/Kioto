@@ -11,6 +11,7 @@ import { item } from '../../models/item';
 export class ItemFormComponent implements OnInit {
 
   item: item = {
+    id: 0,
     nombre: '',
     descripcion: '',
     peso: 0,
@@ -24,16 +25,8 @@ export class ItemFormComponent implements OnInit {
   ngOnInit(): void {}
 
   GuardarForm(): void {
-    const data = {
-      nombre: this.item.nombre,
-      descripcion: this.item.descripcion,
-      peso: this.item.peso,
-      marca: this.item.marca,
-      estado: this.item.estado,
-      cantidad: this.item.cantidad
-    }//data
-    this.itemService.CreateItem(data)
-    .subscribe({
+
+    this.itemService.CreateItem(this.item).subscribe({
       next: (res) => {
         console.log(res);
         this.submitted = true
@@ -45,6 +38,7 @@ export class ItemFormComponent implements OnInit {
   newForm(): void {
     this.submitted = false
     this.item = {
+      id: 0,
       nombre: '',
       descripcion: '',
       peso: 0,
