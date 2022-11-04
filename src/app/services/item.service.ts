@@ -9,9 +9,9 @@ import { catchError, map } from 'rxjs/operators'
 })
 export class ItemService {
   // EndPoint Node/Express API
-  REST_API: string = 'http://localhost:5000/Inshka';
+  REST_API: string = 'http://localhost:5000/Inshka'
   // Http Header
-  httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
+  httpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
 
   constructor(private http: HttpClient) {}
 
@@ -23,7 +23,7 @@ export class ItemService {
   
   //Obtnener un item.
   getOneItem(id: any): Observable<item> {
-    return this.http.get<item>(`${this.REST_API}/OneItem${id}`);
+    return this.http.get<item>(`${this.REST_API}/OneItem${id}`)
   }//getOneItem
 
   // Agregar un item
@@ -39,7 +39,7 @@ export class ItemService {
   // Actualizar un item.
   public updateItem(id:any, data:any): Observable<any> {
     //Canota el EndPoint el link y el id del item a actualizar.
-    let API_URL = `${this.REST_API}/OneItem/${id}`;
+    let API_URL = `${this.REST_API}/OneItem/${id}`
     return this.http.put(API_URL, data, { headers: this.httpHeaders })
     .pipe(
       catchError(this.handleError)

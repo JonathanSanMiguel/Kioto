@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ItemService } from 'src/app/services/item.service';
 import { item } from '../../models/item';
@@ -10,8 +10,17 @@ import { item } from '../../models/item';
 })
 export class ItemListComponent implements OnInit {
   items: item[] = []
+  item: item={
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    peso: 0,
+    marca: '',
+    estado: '',
+    cantidad: 0
+  }
 
-  constructor( private us: ItemService ) { }
+  constructor( private us: ItemService, private router: Router ) { }
 
   ngOnInit(): void {
     this.us.getAllItems().subscribe(
@@ -25,13 +34,13 @@ export class ItemListComponent implements OnInit {
     this.us.deleteItem(id).subscribe(
       res=>{
         console.log('item borrado')
-        this.ngOnInit();
+        this.ngOnInit()
       }//res
     )//deleteItem
   }//eliminar
 
   editar(){
-    
-  }
+    this.router.navigate(['/kioto'])
+  }//editar
 
 }//ItemListComponent
