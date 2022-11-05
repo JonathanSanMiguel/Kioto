@@ -39,8 +39,9 @@ export class ItemListComponent implements OnInit {
     )//deleteItem
   }//eliminar
 
-  editar(){
+  editar(id: any){
     this.router.navigate(['/kioto'])
+    console.log(id);
   }//editar
 
 }//ItemListComponent

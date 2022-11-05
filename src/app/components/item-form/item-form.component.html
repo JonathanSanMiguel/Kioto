@@ -40,7 +40,6 @@
                     </div>
                 </div>
                 <!--Estado-->
-
                 <div class="col-25">
                     <label for="estado">Estado</label>
                 </div>
@@ -51,7 +50,6 @@
                        <option value="reacondicionado">Reacondicionado</option>
                     </select>
                 </div>
-
                 <!--Cantidad-->
                 <div class="col-25">
                     <label for="cantidad">Cantidad (Cajas, Piezas, Paquetes)</label>
@@ -59,19 +57,16 @@
                 <div class="col-75">
                     <input [(ngModel)]="item.cantidad" type="number" id="cantidad" name="Cantidad" placeholder="Ingrese la cantidad de cajas, piezas o paquetes">
                 </div>
-
                 <br>
                 <!--Boton para Guardar-->
                 <div class="row">
                     <input type="submit" (click)="GuardarForm()" value="Guardar">
                 </div>
             </div>
-
             <div *ngIf="submitted">
                 <h4>El Item se Guardo Satisfactoriamente!</h4>
                 <button class="btn btn-success" (click)="newForm()">Add</button>
             </div>
         </form>
     </div>
-
 </body>

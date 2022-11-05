@@ -21,7 +21,7 @@
             <td>{{item.estado}}</td>
             <td>{{item.cantidad}}</td>
 
-            <td><button (click)="editar()" class="btnEditar">Editar</button></td>
+            <td><button (click)="editar(item.id)" class="btnEditar">Editar</button></td>
             <td><button (click)="eliminar(item.id)" class="btnEliminar">Eliminar</button></td>
         </tr>
     </table>
